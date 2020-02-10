@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
+<title> Jamie is the bestestest </title>
+<link rel = "stylesheet" href = "StyleSheet.css">
 <body>
-<h1>
-Jamie Covell
-</h1>
 
-<p>
-I am a student
-</p>
+<button id = "Button1" onclick = "ButtonFunction()">Click this button! I dare you</button>
+
+<script>
+var toggle = true;
+function ButtonFunction()
+{
+	if(toggle)
+	{
+		document.getElementById("Button1").innerHTML = "WOW, you can click a button and that button can do something!";
+		toggle = false
+	}
+	else
+	{
+		document.getElementById("Button1").innerHTML = "Back to the start!";
+		toggle = true;
+	}
+}
+</script>
 
 </body>
 </html>
