@@ -29,6 +29,7 @@ body {
 }
 
 .row:after {
+    padding-top: 25px;
     content: "";
     display: table;
     clear: both;
