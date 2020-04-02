@@ -9,9 +9,9 @@ body {
 }
 
 .left {
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 .middle {
@@ -23,9 +23,9 @@ body {
 }
 
 .right {
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 .row:after {
@@ -51,6 +51,6 @@ p {
 
 h5 {
     font-size: 15px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 1px;
 }
