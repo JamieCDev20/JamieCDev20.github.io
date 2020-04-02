@@ -34,7 +34,7 @@ body {
     clear: both;
 }
 
-.box {
+.box1 {
     width: 100%;
     height: 58%;
 }
@@ -46,4 +46,10 @@ img {
 
 p {
     font-size: 15px;
+}
+
+h5 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 1px;
 }

@@ -6,23 +6,32 @@
 <body>
 
     <center>
+
         <h1>Karts & Krafts Racing AI</h1>
         <h2>Technical Report</h2>
         <h4>Jamie Covell</h4>
+
     </center>
 
     <div class="row">
+
         <div class="column left">
+
             <h4>What is the Problem?</h4>
+
             <p>
                 The problem that I am approaching is a battle racing AI for my team project.<br />
                 This AI will need to be able to find it's own way round teh track and interact with the
                 players via steering the physics based car controller and using the weapons and powerups
                 around the map
             </p>
+
         </div>
+
         <div class="column right">
+
             <h4>Why does the problem need solving?</h4>
+
             <p>
                 The problem needs solving because the game is local multiplayer.
                 If you are trying to play the game on your own then it would be very dull to play.
@@ -30,11 +39,15 @@
                 The AI will need to behave in a way that is similar to that of a real player to make it feel
                 like a challenge
             </p>
+
         </div>
+
     </div>
 
     <div class="column middle">
+
         <h4>Which Technique to use:</h4>
+
         <p>
             The techniques i had considered using were GOAP and a more simple Utility based AI.<br />
             While learning about different AI techniques, these stood out to me because they did not seem
@@ -42,22 +55,81 @@
             I could create an AI that would have a set of things that it could do and would react to the
             situation it was in and respond by picking actions to carry out.
         </p>
+
     </div>
 
     <div class="row">
+        
         <div class="column left">
+        
             <h4>Goap:</h4>
+            
             <p>
-                goap stuff
+                GOAP while still being a Utility based system, builds on it significantly<br />
+                Using the GOAP system, each agent will have a set of actions that they can carry out 
+                and a set of goals that it tries to complete. <br />
+                Here I have a diagram that shows 2 goals: Combat and Race. These goals consist of the
+                actions that it takes to complete them.<br />The combat goal consists of the "Get Weeapon",
+                "Find Nearest Player" and "Shoot Player" actions. The goal is complete when a player is shot.
+                <br />The Race goal consists of the "Find Next Race Point" and "Drive To Next Point" actions. The 
+                goal is complete when the car has driven to the point.<br />
+                The agent would have a set of biases for these goals as to which goal it tries to complete.
+                Each action will also have a cost to complete, this allows the agent to work out what it should do.
+                If the agent had no biases then it would do the same thing every time when given
+                the same circumstances. The biases allow for variance.
             </p>
 
         </div>
+
         <div class="column right">
-            <div class="box">
-                <img src="Actions.png" />
+            
+            <div class="box1">
+            
+                <img src="Actions.png"/>
+            
             </div>
 
         </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="column left">
+
+            <h4>Utility</h4>
+
+            <p>
+                Utility based AI is a system that uses cost analysis to pick the most efficient actions to take.<br />
+                The diagram to the right shows a scenario where an agent is running out of food and needs more.
+                They can either go to the shops and buy the food or they can order the food online.
+                <h5>Going to get food:<br /></h5>
+                If the agent goes to get food themself then the costs they will encounter are: £1.50 fuel there and back and
+                £50 for food. <br />The total cost for this is:
+                (£1.5 x 2) + 50 = 53.<br />
+                <h5>Ordering online:<br /></h5>
+                If the agent decides to order online then the costs are: £50 for food and the £2 delivery fee.<br />
+                The total cost for ordering online is: 
+                50 + 2 = 52.<br /> 
+                <br />
+                The more efficient action in this instance is to order the food online since the petrol costs outweight the delivery costs.
+                However, if the agent is in dire need of food then they might not be able to wait for the food. if we add the 72 hour delivery
+                time to the cost for ordering online, the cost is increased to 52 + 72 = 124. This would make going to get the food the more efficient action.
+                <h5>Biases<br /></h5>
+                Biases can be added to the agents calculations. If we add a bias to the agent to have a strong preferance against travel then we can change the calculation.
+                If we cost travel at £30/hour and the trip would take 1.5 hours each way then the calculation becomes:<br />
+                (£1.5 x 2) + 50 + (1.5hr x 2 x 30) = 143.<br />
+                After adding the bias, the more efficient action becomes ordering online again.
+            </p>
+
+        </div>
+
+        <div class="column right">
+            <p>
+                i need to make and add the diagram
+            </p>
+        </div>
+
     </div>
 
 </body>
