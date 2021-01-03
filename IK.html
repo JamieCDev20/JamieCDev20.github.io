@@ -5,7 +5,7 @@
 
 <body>
 
-    <a href="index.html">Home</a>
+    <a href="index.html" style="color:green; font-size: 20px;" >Home</a>
     <br />
     <br />
     <div class="textBlock">
@@ -19,7 +19,7 @@
         <br />
         <br />
         I got this working with Unity's transforms and eventually using a 3D spider model made by<br />
-        <a href="https://twitter.com/MBrettGames" style="color: green">Matthew Brett</a>.
+        <a href="https://twitter.com/MBrettGames" target="_blank" style="color: green">Matthew Brett</a>.
         A friend and colleague
     </div>
 
@@ -45,7 +45,7 @@
         Forward And Backward Reaching Inverse Kinematics (FABRIK).<br />
         <br />
         Using the papers and videos made available by the creator, found
-        <a href="http://andreasaristidou.com/FABRIK.html" style="color: green">here</a>,
+        <a href="http://andreasaristidou.com/FABRIK.html" target="_blank" style="color: green">here</a>,
         I was<br />
         able to form my own implementation of the algorithm.
         <br /><br />
@@ -56,14 +56,34 @@
         Translating each joint back towards the root so that the limb is where it started.
         <br /><br />
         Using a 3D Orc model made by another friend and colleague
-        <a href="https://twitter.com/s0urearth" style="color:green">Louise Crouch</a>.
+        <a href="https://twitter.com/s0urearth" target="_blank" style="color:green">Louise Crouch</a>.
         <br />
         I was able to create a walk cycle where all of the motion is  generated<br />
         by mathematics.
     </div>
-    <br />
-    <br />
+    <br /><br />
     <img src="images/OrkWalk.gif" width="800" height="480" />
+    <br /><br />
+    <div class="textBlock">
+
+        For this project, I wanted to take a more generic approach and abstract away<br />
+        from Unity's transform and rotation systems.<br />
+        This meant doing a lot of research into rotation in 3D space and<br />
+        a lot of brushing up on my GCSE and A-Level maths topics!
+        <br /><br />
+        All of the calculations in the system are done on my own classes<br />
+        using quaternions so that I had complete control over the position <br />
+        and rotation of the joints.
+        <br /><br />
+        Additionally, to demonstrate the IK system, I wanted to have the model<br />
+        be animated. Since I have more maths knowledge than I do animation<br />
+        knowledge, I decided that I would animate all of the limbs by moving the<br />
+        targets around using a combination of waves to create what I think is a<br />
+        somewhat realistic walk cycle!
+
+    </div>
+    <br /><br />
+    <a href="index.html" style="color:green; font-size: 20px;" >Home</a>
 
 </body>
 
