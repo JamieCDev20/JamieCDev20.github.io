@@ -1,56 +1,47 @@
 body {
-    background-color: darkseagreen;
-    font-family: verdana
-}
-
-.column {
-    float: left;
-    width: 100%;
-}
-
-.left {
-    width: 45%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-}
-
-.middle {
+    background-image: url("images/dark-honeycomb.png");
+    background-repeat: repeat;
+    font-family: CVetica;
     text-align: center;
-    align-content: center;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+    color: #4EA40A;
 }
 
-.right {
-    width: 45%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+@font-face{
+    font-family: CVetica;
+    src: url("font/coolvetica rg.ttf");
 }
 
-.row:after {
-    padding-top: 25px;
-    content: "";
-    display: table;
-    clear: both;
+.greenOverlay{
+    z-index: 1;
+    background: rgba(0, 255, 0, 0.3);
+    color: black;
+    padding: 1rem;
 }
 
-.box1 {
-    width: 100%;
-    height: 58%;
+h1{
+    font-size: 50px;
 }
 
-img {
-    width: 100%;
-    height: 100%;
+.textBlock{
+    font-size: 25px;
 }
 
-p {
-    font-size: 15px;
+.startCollapsed{
+    display: none;
 }
 
-h5 {
-    font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 1px;
+.sectionTitle{
+    font-size: 40px;
+}
+
+.inline{
+    display: inline;
+}
+
+.left{
+    text-align: left;
+}
+
+.fnt {
+    font-family: CVetica;
 }

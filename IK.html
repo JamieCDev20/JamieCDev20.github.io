@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>Jamie Covell | Inverse Kinematics</title>
+<link rel="stylesheet" href="StyleSheet.css">
+
+<body>
+
+    <a href="index.html">Home</a>
+    <br />
+    <br />
+    <div class="textBlock">
+        I started an Inverse Kinematics (IK) project over the summer in my free time. <br />
+        I was just experimenting to see what I could come up with using an algorithm called<br />
+        Cyclic Coordinate Descent (CCD).
+        <br />
+        <br />
+        CCD loops through the IK chains (limbs) from tip to root and rotates each joint to move the tip<br />
+        closer to the target.
+        <br />
+        <br />
+        I got this working with Unity's transforms and eventually using a 3D spider model made by<br />
+        <a href="https://twitter.com/MBrettGames" style="color: green">Matthew Brett</a>.
+        A friend and colleague
+    </div>
+
+    <br />
+    <br />
+    <img src="images/SpiderWalk.gif" width="800" height="480" />
+    <br />
+    <br />
+    <div class="textBlock">
+        The above and below gifs show the spider walking around a small demo scene.<br />
+        As well as my first attempt at getting the legs to respect terrain like<br />
+        slopes and steps.
+    </div>
+    <br />
+    <br />
+    <img src="images/PlatformLegs.gif" width="800" height="480" />
+    <br />
+    <br />
+    <div class="textBlock">
+
+        After dropping this project for a while, I restarted it with more research going<br />
+        into the project at first. I settled on an algorithm called <br />
+        Forward And Backward Reaching Inverse Kinematics (FABRIK).<br />
+        <br />
+        Using the papers and videos made available by the creator, found
+        <a href="http://andreasaristidou.com/FABRIK.html" style="color: green">here</a>,
+        I was<br />
+        able to form my own implementation of the algorithm.
+        <br /><br />
+        FABRIK works by looping through the limb twice, once from tip to root:<br />
+        rotating each joint to point towards it's target, moving it to it's target<br />
+        and then setting it'self as the next joint's target.<br />
+        Then a second time from root to tip:<br />
+        Translating each joint back towards the root so that the limb is where it started.
+        <br /><br />
+        Using a 3D Orc model made by another friend and colleague
+        <a href="https://twitter.com/s0urearth" style="color:green">Louise Crouch</a>.
+        <br />
+        I was able to create a walk cycle where all of the motion is  generated<br />
+        by mathematics.
+    </div>
+    <br />
+    <br />
+    <img src="images/OrkWalk.gif" width="800" height="480" />
+
+</body>
+
+</html>
