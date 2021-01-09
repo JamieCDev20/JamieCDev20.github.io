@@ -34,6 +34,10 @@ h1 {
     font-size: 40px;
 }
 
+.minorTitle{
+    font-size: 30px;
+}
+
 .inline {
     display: inline;
 }
